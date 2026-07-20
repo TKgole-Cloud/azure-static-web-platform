@@ -1,57 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloudNova Solutions</title>
+    <title>Rock · Paper · Scissors</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="game-container">
+        <h1>✧ <span>RPS</span> ✧</h1>
 
-    <header>
-        <h1>CloudNova Solutions</h1>
-        <p>Simple • Reliable • Automated</p>
-    </header>
+        <!-- scoreboard -->
+        <div class="scoreboard">
+            <div class="score player-score">
+                🧑 <span id="playerScore">0</span>
+            </div>
+            <div class="score computer-score">
+                🤖 <span id="computerScore">0</span>
+            </div>
+        </div>
 
-    <main>
+        <!-- choice buttons -->
+        <div class="choices">
+            <button class="choice-btn rock" data-choice="rock">
+                <span class="emoji">🪨</span> Rock
+            </button>
+            <button class="choice-btn paper" data-choice="paper">
+                <span class="emoji">📄</span> Paper
+            </button>
+            <button class="choice-btn scissors" data-choice="scissors">
+                <span class="emoji">✂️</span> Scissors
+            </button>
+        </div>
 
-        <section>
-            <h2>About Us</h2>
-            <p>
-                CloudNova Solutions helps businesses deploy applications using
-                Microsoft Azure, Docker, Terraform, and CI/CD automation.
-            </p>
-        </section>
+        <!-- result display -->
+        <div class="result-area">
+            <div class="round-message" id="roundMessage">
+                <span>👋</span> click a move
+            </div>
+        </div>
 
-        <section>
-            <h2>Our Services</h2>
-
-            <ul>
-                <li>Cloud Infrastructure</li>
-                <li>Infrastructure as Code</li>
-                <li>Docker Containerization</li>
-                <li>CI/CD Automation</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Contact</h2>
-
-            <p>Email: info@cloudnova.com</p>
-            <p>Phone: +27 11 123 4567</p>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>© 2026 CloudNova Solutions</p>
-    </footer>
+        <!-- reset -->
+        <div class="reset-area">
+            <button id="resetBtn">⟳ reset game</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
